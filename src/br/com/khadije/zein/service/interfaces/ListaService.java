@@ -1,27 +1,28 @@
 package br.com.khadije.zein.service.interfaces;
 
-public interface ListaService<T extends Comparable<T>> {
+public interface ListaService<T extends Comparable<T>, R> {
 	
-	public T insereInicio(T l, T x);
+	public R insereInicio(R l, T x);
 	
-	public T remover(T l, T x);
+	public R remover(R l, T x);
 	
-	public Integer busca(T l, T x);
+	public Integer busca(R l, T x);
 	
-	public T FLVazia(T l);
+	public R FLVazia(R l);
 	
-	public T insereFim(T l, T x);
+	public R insereFim(R l, T x);
 	
-	public T insereP(T l, T x, Integer p);
+	public R insereP(R l, T x, Integer p);
 
-	public T retira(Integer p, T l , T x);
+	public T retira(Integer p, R l , T x);
 	
-	public Boolean vazia(T l);
+	public Boolean vazia(R l);
 	
-	public void imprime(T l);
+	public void imprime(R l);
 	
-	public T ordenar(T l);
+	public R ordenar(R l);
 	
-	public T concatenar (T l1, T l2) throws InstantiationException, IllegalAccessException;
+	public R concatenar (R l1, R l2);
+
 
 }
